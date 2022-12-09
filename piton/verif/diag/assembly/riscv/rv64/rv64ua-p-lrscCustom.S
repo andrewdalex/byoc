@@ -40,6 +40,13 @@ TEST_CASE( 4, a4, 1, \
   sc.w a4, a1, (a0); \
 )
 
+TEST_CASE( 5, a1, 1, \
+  la a0, foo; \
+  li a5, 0xdeadbeef; \
+  sc.w a4, a5, (a0); \
+  lr.w a1, (a0);
+)
+
 
 
 
